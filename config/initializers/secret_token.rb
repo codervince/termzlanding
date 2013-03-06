@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Termzlanding::Application.config.secret_token = '0f7230d6a266b2d3b2a3e4f1a4f6d7680f80e60012357974a01db1a94b2d84b461c71e20709bc4c59fa934bffcbb525c56f2a92175b541d30f04aa29e0eff97b'
+Termzlanding::Application.config.secret_token = '66d131a5ef1094ccbac17e52cf1ea61071fb3f02c72cfcd439dd11354a13e90a2968dca1e57a24e9428875f66815f0e489141ae8deec8af6d240d9820bf0dcf0'
