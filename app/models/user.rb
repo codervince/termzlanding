@@ -71,4 +71,15 @@ class User < ActiveRecord::Base
     end
   end
 
+  #for language select box
+  def self.lng_list
+    #removing locale language
+
+  [['English', 'en'], ['French', 'fr'], ['German', 'de'], ['Thai', 'th']].delete_if { |x| x[1] == I18n.locale.to_s}
+end
+
+
+
+
+
 end

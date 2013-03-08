@@ -18,3 +18,11 @@ puts 'user: ' << user.name
 user.add_role :admin
 user.skip_confirmation!
 user.save!
+
+puts 'CREATING MORE USERS'
+user1 = User.create! :name => 'First User', :email => 'user@example.com', :password => 'pleasechangeme', :password_confirmation => 'pleasechangeme'
+user1.confirm!
+puts 'New user created: ' << user1.name
+user2 = User.create! :name => 'Second User', :email => 'user2@example.com', :password => 'pleasechangeme', :password_confirmation => 'pleasechangeme'
+user2.confirm!
+puts 'New user created: ' << user2.name

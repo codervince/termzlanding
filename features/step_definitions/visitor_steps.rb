@@ -47,3 +47,20 @@ When /^I request an invitation with an invalid email$/ do
   user = new_user.merge(:email => "notanemail")
   invitation_request user
 end
+
+Given /^my locale is "([^"]*)"$/ do |locale|
+  I18n.locale = locale
+end
+
+Then /^I should see a field "([^"]*)"$/ do |arg1|
+  page.has_field?(arg1)
+end
+
+When /^I select "(.*)" from "(.*)"$/ do |value, field|
+  select(value, :from => field) 
+end
+
+Then /^the "([^"]*)" drop-down should not contain the option "([^"]*)"$/ do |id, value|
+  page.should_not have_xpath "//select[@id = '#{id}']/option[@value = '#{value}']"
+end
+
